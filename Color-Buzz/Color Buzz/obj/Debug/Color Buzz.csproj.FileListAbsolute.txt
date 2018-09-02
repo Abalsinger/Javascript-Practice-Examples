@@ -1,0 +1,12 @@
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.exe.config
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.exe
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.pdb
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.csprojResolveAssemblyReference.cache
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.exe
+c:\users\amy balsinger\documents\visual studio 2015\Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.pdb
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.exe.config
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.exe
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.pdb
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.exe
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\bin\Debug\Color Buzz.pdb
+C:\Users\Amy Balsinger\Desktop\New Projects\Color Buzz\Color Buzz\obj\Debug\Color Buzz.csprojResolveAssemblyReference.cache
