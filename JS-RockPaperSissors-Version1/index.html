@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title of the Page</title>
+         <link rel="stylesheet" type="text/css" href="main.css">
+    
+    </head>
+    <body>
+        <h1> Rock Paper Scissors.</h1>
+          <p> Your Play:
+            <input id='input' type="text" />
+          </p>
+          <p id="message"> </p>  
+          <button type="button" onclick="playGame()"> Submit </button>
+          <button type="button" onclick="resetButton()"> Reset Game </button>
+        <script>
+            //More Literal
+           function playGame()
+                {
+                    
+                var userPlay = document.getElementById("input");
+
+                var computerPlay = Math.floor(Math.random()*2);
+                
+                if (userPlay.value.toLowerCase() == "rock") {
+                    if (computerPlay == 0) {
+                       var gameEnd = "Computer Plays: paper" + "<p>Computer Wins</p>"; 
+                    }
+                    else if (computerPlay == 1){
+                       var gameEnd = "Computer Plays: rock" + "<p>Game Tied</p>";  
+                    }
+                    else if (computerPlay == 2){
+                       var gameEnd = "Computer Plays: scissors" + "<p>User Wins</p>"; 
+                    }
+                    reset();
+                }
+                else if (userPlay.value == "paper" && computerPlay == 0)
+                  {
+                    var gameEnd = "Computer Plays: paper" + "<p>Game Tied</p>";
+                    reset();
+                  }
+                else if (userPlay.value == "paper" && computerPlay == 1)
+                  {
+                    var gameEnd = "Computer Plays: rock" + "<p>User Wins</p>";
+                    reset();
+                  }
+                else if (userPlay.value == "paper" && computerPlay == 2)
+                  {
+                    var gameEnd = "Computer Plays: scissors" + "<p>Computer Wins</p>";
+                    reset();
+                  }
+                else if (userPlay.value == "scissors" && computerPlay == 0)
+                  {
+                    var gameEnd = "Computer Plays: paper" + "<p>User Wins</p>";
+                    reset();
+                  }
+                else if (userPlay.value == "scissors" && computerPlay == 1)
+                  {
+                    var gameEnd = "Computer Plays: rock" + "<p>Computer Wins</p>";
+                    reset();
+                  }
+                else if (userPlay.value == "scissors" && computerPlay == 2)
+                  {
+                    var gameEnd = "Computer Plays: scissors" + "<p>Game Tied</p>";
+                    reset();
+                  }
+                else
+                  {
+                    var gameEnd = "Please enter either rock, paper or scissors.";
+                    reset();
+                  }
+                  document.getElementById("message").innerHTML = gameEnd;
+                }
+              function reset(){
+                  document.getElementById("message").style.display = "block";
+              }
+              function resetButton() {
+                  document.getElementById("message").style.display = "none";
+                  document.getElementById("input").value = "";
+              }
+            
+
+        </script>
+    </body>
+</html> 

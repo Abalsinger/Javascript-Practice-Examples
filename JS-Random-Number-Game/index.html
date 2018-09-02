@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title of the Page</title>
+         <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <h2>Here's my Website</h2>
+        <p class="attempts"></p>
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+        
+        <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+        
+        <input type="submit" value="Submit guess" class="guessSubmit">
+        
+        <script>
+
+            var randomNumber = getRandomNumber();
+            
+            var attempts = document.querySelector('.attempts');
+            var guesses = document.querySelector('.guesses');
+            var lastResult = document.querySelector('.lastResult');
+            var lowOrHi = document.querySelector('.lowOrHi');
+
+            var guessSubmit = document.querySelector('.guessSubmit');
+            var guessField = document.querySelector('.guessField');
+            
+            var count = 0;
+
+            var guessCount = 1;
+            var resetButton;
+        
+            
+            function checkGuess() {
+              var userGuess = Number(guessField.value);
+                
+              if (guessCount === 1) {
+                attempts.textContent = 'Number of Attempts: '
+                guesses.textContent = 'Previous guesses: ';
+              }
+              guesses.textContent += userGuess + ' ';
+              count += 1;
+              attempts.textContent = 'Number of Attempts: ' + count;
+
+              if (userGuess === randomNumber) {
+                lastResult.style.backgroundImage = 'url("images/I-heal-you.png")';
+                lastResult.style.height = '355px';
+                lastResult.style.width = '396px';
+                lastResult.style.display = 'block';
+                resetButton.parentNode.removeChild(resetButton);
+                //lastResult.style.backgroundColor = 'green';
+                lowOrHi.textContent = '';
+                setGameOver();
+              } else {
+                lastResult.textContent = 'Wrong!';
+                lastResult.style.backgroundColor = 'red';
+                if(userGuess < randomNumber) {
+                  lowOrHi.textContent = 'Last guess was too low!';
+                } else if(userGuess > randomNumber) {
+                  lowOrHi.textContent = 'Last guess was too high!';
+                }
+              }
+                
+              guessCount++;
+              guessField.value = '';
+              guessField.focus();
+            }
+            
+            guessSubmit.addEventListener('click', checkGuess);
+            createResetButton();
+
+          function setGameOver() {
+              guessField.disabled = true;
+              guessSubmit.disabled = true;
+              createResetButton(); 
+                }
+            
+          function resetGame() {
+              guessCount = 1;
+
+              //var resetParas = document.querySelectorAll('.resultParas p');
+              //for (var i = 0 ; i < resetParas.length ; i++) {
+                //resetParas[i].textContent = '';
+              //}
+
+              resetButton.parentNode.removeChild(resetButton);
+
+              guessField.disabled = false;
+              guessSubmit.disabled = false;
+              guessField.value = '';
+              guessField.focus();
+              
+              createResetButton();
+
+              lastResult.style.backgroundColor = 'white';
+
+              randomNumber = getRandomNumber();
+              
+              lastResult.style.display = 'none';
+              
+              guesses.textContent = ' ';
+              lastResult.textContent = ' ';
+              lowOrHi.textContent = ' ';
+                }
+            
+            function getRandomNumber() {
+                return  Math.floor(Math.random() * 100) + 1;
+                //return 3;
+            }
+            
+            function createResetButton() {
+              resetButton = document.createElement('button');
+              resetButton.textContent = 'Start new game';
+              document.body.appendChild(resetButton);
+              resetButton.addEventListener('click', resetGame); 
+            }
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title of the Page</title>
+         <link rel="stylesheet" type="text/css" href="main.css">
+    
+    </head>
+    <body>
+        <h1> Rock Paper Scissors.</h1>
+          <p> Your Play:
+            <input id='input' type="text" />
+          </p>
+          <p id="message"> </p>  
+          <button type="button" onclick="playGame()"> Submit </button>
+          <button type="button" onclick="resetButton()"> Reset Game </button>
+        <script>
+            //If you wanted to add an extra weapon you would only have to add it in one spot vrs. in Version 1 we would have to create a new list of sceneros
+           const beatenBy = {
+               "rock" : "scissors",
+               "scissors" : "paper",
+               "paper" : "rock"     
+           }
+           
+           const choices = Object.keys(beatenBy);
+           
+           function computerChoice() {
+            return choices[Math.floor(Math.random() * choices.length)];
+            }
+            
+            function playGame() {
+                
+                var userPlay = document.getElementById("input").value.toLowerCase();
+                
+                var computerPlay = computerChoice();
+                
+                var gameEnd;
+                
+                
+                if(choices.indexOf(userPlay) === -1){
+                   reset();
+                   document.getElementById("message").innerHTML = "Please enter a valid entry";
+                   return;
+                }
+                
+                if(userPlay === computerPlay){
+                    gameEnd = "Game is a tie"
+                }
+                else if (beatenBy[userPlay] === computerPlay) 
+                {
+                    gameEnd = "User Has Won!";
+                }
+                else {
+                    gameEnd = "Computer Has Won!";
+                }
+            reset();
+            document.getElementById("message").innerHTML = "Computer Plays: " + computerPlay + "<p>" + gameEnd + "</p>";
+            }
+            
+            function reset(){
+                document.getElementById("message").style.display = "block";
+            }
+            function resetButton() {
+                document.getElementById("message").style.display = "none";
+                document.getElementById("input").value = "";
+            }
+            
+
+        </script>
+    </body>
+</html> 
