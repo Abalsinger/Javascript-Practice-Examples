@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stats Calculator</title>
+         <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+          div {
+            height: 150px;
+            border: 1px solid;
+            text-align: center;
+            } 
+    </style>
+    </head>
+    <body>
+        <div>           
+            <h1>Stats</h1>  
+            <h6>Put a space between each number</h6>
+            <input type="text" id="numbers">
+            <button onclick="getStats()">Calculate</button>
+            <input type="reset" value="Reset" id="reset" />
+                    <h3 id="printMin"></h3>
+                    <h3 id="printMax"></h3>
+                    <h3 id="printMean"></h3>
+                    <h3 id="printMedian"></h3>
+                    <h3 id="printMode"></h3>
+                    <h3 id="printRange"></h3>
+                    <h3 id="printUpperQ"></h3>
+                    <h3 id="printLowerQ"></h3>
+                    <h3 id="printVariance"></h3>
+        </div>  
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html> 
