@@ -1,6 +1,10 @@
 # Javascript-Practice-Examples
 <dt>Javascript is written directly into the html page.</dt>
 <dl>
+  <dt>JS-Stats-Calculator</dt>
+  <dd>Language: Javascript</dd>
+  <dd>Description: Generates the minimum, maximum, mean, median, mode, range, upper quartile, lower quartile and variance values from a list of numbers.</dd>
+<dl>
   <dt>JS-Random-Number-Game</dt>
   <dd>Language: Javascript</dd>
   <dd>Description: Player submits a number between 1 and 100. Player is given an unlimited amount of guesses, and given Player hints of "too high" or "too low". The number of guesses is recorded until the player wins. </dd>
