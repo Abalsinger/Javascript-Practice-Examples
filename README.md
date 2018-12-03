@@ -1,6 +1,16 @@
 # Javascript-Practice-Examples
 <dt>Javascript is written directly into the html page.</dt>
 <dl>
+  <dt>JS-Slope</dt>
+  <dd>Language: Javascript</dd>
+  <dd>Description: Generates the slope of a randomly entered x1, x2, y1 and y2.</dd>
+<dl>
+<dl>
+  <dt>Json-manipulation</dt>
+  <dd>Language: Javascript</dd>
+  <dd>Description: Object.assign method is used to copy the values from two source objects into a target object, and then return the target object in innerHTML.</dd>
+<dl> 
+<dl>
   <dt>JS-Stats-Calculator</dt>
   <dd>Language: Javascript</dd>
   <dd>Description: Generates the minimum, maximum, mean, median, mode, range, upper quartile, lower quartile and variance values from a list of numbers.</dd>
