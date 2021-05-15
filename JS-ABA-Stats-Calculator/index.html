@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stats Calculator</title>
+         <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+           #stats {
+            height: 150px;
+            border: 1px solid;
+            text-align: center;
+            }
+        
+            table, th, td {
+                border: 1px solid black;
+                }
+    </style>
+    </head>
+    <body>
+        <div id="stats">           
+            <h1>Stats</h1>  
+            <h6>Put a space between each number</h6>
+            <input type="text" id="numbers">  
+            <input type="text" id="numbersB">     
+            <button onclick="getStats()">Calculate</button>
+            <input type="reset" value="Reset" id="reset" />
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Phase A</th>
+                    <th>Phase B</th>
+                </tr>
+                <tr>
+                    <td>Frequency</td>
+                    <td><h3 id="printFreq"></h3></td>
+                    <td><h3 id="printFreqB"></h3></td>
+                </tr>
+                <tr>
+                    <td>Mean</td>
+                    <td><h3 id="printMean"></h3></td>
+                    <td><h3 id="printMeanB"></h3></td>
+                </tr>
+                <tr>
+                    <td>Trend</td>
+                    <td><h3 id="printTrend"></h3></td>
+                    <td><h3 id="printTrendB"></h3></td>
+                </tr>
+                <tr>
+                    <td>Stability-Upper-Limit</td>
+                    <td><h3 id="printUpperLimit"></h3></td>
+                    <td><h3 id="printUpperLimitB"></h3></td>
+                </tr>
+                <tr>
+                    <td>Stability-Down-Limit</td>
+                    <td><h3 id="printLowerLimit"></h3></td>
+                    <td><h3 id="printLowerLimitB"></h3></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Immediacy</td>
+                    <td><h3 id="printImmediacy"></h3></td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html> 
